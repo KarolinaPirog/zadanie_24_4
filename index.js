@@ -7,12 +7,23 @@ const formatDate = (secondsOS) => {
         if (hours == 0) {
             if (minutes == 0) {
                 return seconds + "s";
+            } else if (seconds == 0) {
+                return minutes + "m";
             } else {
                 return minutes + "m " + seconds + "s";
             };
+        } else if (minutes == 0) {
+            if (seconds == 0) {
+                return hours + "h";
+            } else {
+                return hours + "h " + seconds + "s";
+            }
+        } else if (seconds == 0) {
+            return hours + "h " + minutes + "m";
         } else {
             return hours + "h " + minutes + "m " + seconds + "s"; 
         };
+         
     } else {
         return "0s";
     };
