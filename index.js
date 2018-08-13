@@ -6,15 +6,15 @@ const formatDate = (secondsOS) => {
 
         if (hours == 0) {
             if (minutes == 0) {
-                return seconds + " sec.";
+                return seconds + "s";
             } else {
-                return minutes + " min. " + seconds + " sec.";
+                return minutes + "m " + seconds + "s";
             };
         } else {
-            return hours + " h. " + minutes + " min. " + seconds + " sec."; 
+            return hours + "h " + minutes + "m " + seconds + "s"; 
         };
     } else {
-        return "Value should be greater than 0.";
+        return "0s";
     };
 };
   
